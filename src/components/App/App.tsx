@@ -14,8 +14,7 @@ class App extends React.Component<object, InterfaceState> {
 
 	public increment = () => {
 		let { clicksCount } = this.state;
-		const incremented = ++clicksCount;
-		this.setState({ clicksCount: incremented });
+		this.setState({ clicksCount: ++clicksCount });
 	};
 
 	public decrement = () => {
@@ -23,8 +22,7 @@ class App extends React.Component<object, InterfaceState> {
 		if (clicksCount <= 0) {
 			return;
 		}
-		const decremented = --clicksCount;
-		this.setState({ clicksCount: decremented });
+		this.setState({ clicksCount: --clicksCount });
 	};
 
 	public render() {
