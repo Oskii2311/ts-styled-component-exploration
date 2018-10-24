@@ -1,7 +1,7 @@
 import * as React from "react";
 import Button from "../Button/Button";
 import Counter from "../Counter/Counter";
-import "./App.css";
+import AppStyled from "./AppStyled";
 
 interface InterfaceState {
 	clicksCount: number;
@@ -14,7 +14,7 @@ class App extends React.Component<object, InterfaceState> {
 
 	public render() {
 		return (
-			<div className="App">
+			<AppStyled>
 				<Counter clicksCount={this.state.clicksCount} />
 				<Button primary={true} click={this.increment}>
 					INCREMENT
@@ -22,7 +22,7 @@ class App extends React.Component<object, InterfaceState> {
 				<Button primary={false} click={this.decrement}>
 					DECREMENT
 				</Button>
-			</div>
+			</AppStyled>
 		);
 	}
 
