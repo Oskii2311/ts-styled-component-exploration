@@ -12,19 +12,6 @@ const initialState = { clicksCount: 0 };
 class App extends React.Component<object, InterfaceState> {
 	public state: InterfaceState = initialState;
 
-	public increment = () => {
-		let { clicksCount } = this.state;
-		this.setState({ clicksCount: ++clicksCount });
-	};
-
-	public decrement = () => {
-		let { clicksCount } = this.state;
-		if (clicksCount <= 0) {
-			return;
-		}
-		this.setState({ clicksCount: --clicksCount });
-	};
-
 	public render() {
 		return (
 			<div className="App">
@@ -38,6 +25,19 @@ class App extends React.Component<object, InterfaceState> {
 			</div>
 		);
 	}
+
+	private increment = () => {
+		let { clicksCount } = this.state;
+		this.setState({ clicksCount: ++clicksCount });
+	};
+
+	private decrement = () => {
+		let { clicksCount } = this.state;
+		if (clicksCount <= 0) {
+			return;
+		}
+		this.setState({ clicksCount: --clicksCount });
+	};
 }
 
 export default App;

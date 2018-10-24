@@ -7,11 +7,7 @@ interface InterfaceProps {
 	click?: () => void;
 }
 
-const Button: React.StatelessComponent<InterfaceProps> = ({
-	children,
-	primary,
-	click,
-}) => (
+const Button = ({ children, primary, click }: InterfaceProps) => (
 	<ButtonContainer primary={primary}>
 		<button onClick={click}> {children} </button>
 	</ButtonContainer>
